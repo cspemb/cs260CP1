@@ -149,12 +149,12 @@ h2 {
 }
 
 #photo1 {
-  background-image: url("/pexels-wendy-wei-1601464.jpg");
+  background-image: url("./images/pexels-wendy-wei-1601464.jpg");
   height: 30rem;
 }
 
 #photo2 {
-  background-image: url("/pexels-cottonbro-5648530.jpg");
+  background-image: url("./images/pexels-cottonbro-5648530.jpg");
   height: 30rem;
 }
 
