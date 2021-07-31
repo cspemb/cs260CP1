@@ -1,0 +1,265 @@
+* {
+  font-family: var(--Raleway) !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #dddddd;
+  --c1: #212730;
+  --c2: #f05454;
+  --c3: #30475e;
+
+  --c1-t: rgba(33, 39, 48, 0.8);
+  --c2-t: rgba(240, 84, 84, 0.7);
+  --c3-t: rgba(48, 71, 94, 0.8);
+  --bg-t: rgba(221, 221, 221, 0.95);
+  --fade: rgba(33, 39, 48, 0.2);
+
+  --Raleway: "Raleway", sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BODY */
+body,
+html {
+  height: 100%;
+}
+
+body {
+  color: var(--c3) !important;
+  background-color: var(--bg) !important;
+  padding-top: 5rem;
+}
+
+a {
+  color: var(--c1) !important;
+  text-decoration: none !important;
+
+  transition: color 150ms ease;
+}
+
+a:focus,
+a:hover,
+a:active {
+  color: var(--c2) !important;
+  text-decoration: none;
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands" !important;
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+
+/* nav */
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--fade);
+}
+
+#logo-sm {
+  height: 4rem;
+}
+#logo-lg {
+  height: 3rem;
+  width: 12rem;
+}
+
+.nav-link {
+  margin: 0.05em 3em;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 1.1em;
+}
+
+.nav-link:hover {
+  background-color: var(--c2);
+  color: var(--c1) !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--bg) !important;
+  background-color: var(--c3);
+}
+
+.navbar-light .navbar-nav .nav-link.active:hover {
+  background-color: var(--c1);
+}
+nav.bg-light {
+  background-color: var(--bg) !important;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* content */
+
+h1 {
+  color: var(--c1);
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 4px;
+  margin-bottom: 0 !important;
+}
+
+section {
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg);
+  margin: 1rem;
+}
+
+h2 {
+  margin-bottom: 2rem !important;
+  color: var(--c1) !important;
+}
+
+/* overlayed photos */
+.photo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#photo1 {
+  background-image: url("/pexels-wendy-wei-1601464.jpg");
+  height: 30rem;
+}
+
+#photo2 {
+  background-image: url("/pexels-cottonbro-5648530.jpg");
+  height: 30rem;
+}
+
+.photo-inside {
+  padding: 0.5rem 1rem;
+
+  background-color: var(--bg-t);
+  color: var(--c1);
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0%;
+  left: 20%;
+  background: var(--bg-t);
+  width: 60%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.75rem;
+
+  transition: 250ms ease;
+  opacity: 0;
+  color: var(--c1);
+
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+}
+
+.photo:hover .overlay,
+.photo:focus .overlay {
+  opacity: 1;
+}
+
+/* cards */
+.card-deck {
+  margin-top: 0 !important;
+  width: 100%;
+}
+
+.card {
+  margin-bottom: 0 !important;
+  border-radius: 0 !important;
+  background-color: var(--bg) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--fade) !important;
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--c3) !important;
+  color: var(--bg) !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.btn:hover {
+  color: var(--c1) !important;
+  background-color: var(--c2) !important;
+}
+
+/* footer */
+
+footer {
+  font-size: 0.9rem;
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 80%;
+
+  border-top: 1px solid var(--fade);
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+footer .fab,
+footer .fas {
+  padding: 0.5em;
+}
+
+footer li {
+  padding: 0 0.25em;
+}
+
+footer a {
+  margin: 0.25em 0;
+  color: var(--c3-t) !important;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-device-width: 1024px) {
+  .photo {
+    background-attachment: scroll;
+  }
+}
