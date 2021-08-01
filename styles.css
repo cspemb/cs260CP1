@@ -457,7 +457,7 @@ footer a {
 
 /* RESPONSIVE */
 
-@media only screen and (min-device-width: 426) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 426px) and (max-device-width: 1024px) {
   .page {
     margin: 0 8vw;
   }
